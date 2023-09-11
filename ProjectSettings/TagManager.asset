@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - poop
+  - Floor
   layers:
   - Default
   - TransparentFX
