@@ -35,10 +35,10 @@ public class Poop : MonoBehaviour
     {
         _rigidbody2D.gravityScale = Random.Range(1.0f, 1.5f);
     }
-
-    private void OnCollisionEnter2D(Collision2D other)
+    
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Floor")
+        if (other.gameObject.CompareTag("Floor"))
         {
             this.gameObject.SetActive(false); // 1. 옵젝풀로 반환해야 함
             // 2. 점수 오름
