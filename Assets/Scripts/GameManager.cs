@@ -7,6 +7,18 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+    private int _numberOfAlives = 1;
+    public int NumberOfAlives
+    {
+        get { return _numberOfAlives; }
+        set
+        {
+            _numberOfAlives = value;
+            if (_numberOfAlives <= 0)
+                CallbackGameEnd();
+        }
+    }
+
     private float _gameTime;
     public float GameTime
     {
@@ -38,7 +50,6 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
-        // 싱글톤 패턴
         Instance = this;
     }
 
@@ -67,6 +78,9 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1f;
         Score = 0;
         GameTime = 0f;
+        NumberOfAlives = 2;
+        for (int i = 0; i < NumberOfAlives; i++)
+            CharacterManager.Instance.MakeCharacter(i);
     }
 
     void StopGame()
