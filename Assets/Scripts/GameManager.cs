@@ -65,6 +65,8 @@ public class GameManager : MonoBehaviour
     void InitGame()
     {
         Time.timeScale = 1f;
+        Score = 0;
+        GameTime = 0f;
     }
 
     void StopGame()
