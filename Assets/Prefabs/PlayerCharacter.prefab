@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 5013761042213086301}
   - component: {fileID: 2923975254262489147}
   - component: {fileID: 7357091310851586041}
+  - component: {fileID: 8375847114622272910}
   m_Layer: 0
   m_Name: PlayerCharacter
   m_TagString: Player
@@ -37,7 +38,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6280710314197430973
 SpriteRenderer:
@@ -103,7 +104,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: e4cff99bdcba65045bd79a993cb7a7cd, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -168,7 +169,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.05744022, y: -0.1937964}
@@ -248,5 +249,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9467ebc813bfc0f4faec8a1565399b51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8375847114622272910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8869694654560915245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a49bbbd8e74946444ab3e59146c56e6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

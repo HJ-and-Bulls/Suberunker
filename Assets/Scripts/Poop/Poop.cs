@@ -41,7 +41,8 @@ public class Poop : MonoBehaviour
         if (other.gameObject.CompareTag("Floor"))
         {
             this.gameObject.SetActive(false); // 1. 옵젝풀로 반환해야 함
-            // 2. 점수 오름
+            GameManager.Instance.AddScore(); // 2. 점수 오름
+            //GameManager.Instance.Score += _level;
         }
     }
 }

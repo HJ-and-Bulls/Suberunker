@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
         {
             _numberOfAlives = value;
             if (_numberOfAlives <= 0)
-                CallbackGameEnd();
+                OnGameEnd?.Invoke();
         }
     }
 
@@ -59,32 +59,36 @@ public class GameManager : MonoBehaviour
         OnGameStart += InitGame;
         OnGameEnd += StopGame;
 
-        CallbackGameStart();
-    }
-
-    void CallbackGameStart()
-    {
         OnGameStart?.Invoke();
-    }
-
-    // OnGameEnd를 호출하기 위한 함수입니다.
-    void CallbackGameEnd()
-    {
-        OnGameEnd?.Invoke();
     }
 
     void InitGame()
     {
+        CharacterManager.Instance.ClearCharacterArray();
         Time.timeScale = 1f;
         Score = 0;
         GameTime = 0f;
         NumberOfAlives = 2;
         for (int i = 0; i < NumberOfAlives; i++)
-            CharacterManager.Instance.MakeCharacter(i);
+        {
+            GameObject generatedCharacter = CharacterManager.Instance.MakeCharacter(i);
+            generatedCharacter.GetComponent<Player>().OnDead += PlayerDeadCallback;
+        }
+            
     }
 
     void StopGame()
     {
         Time.timeScale = 0f;
+    }
+
+    void PlayerDeadCallback()
+    {
+        --NumberOfAlives;
+    }
+
+    public void AddScore()
+    {
+        Score += NumberOfAlives * 1; // 1은 난이도에 따라 증가
     }
 }
