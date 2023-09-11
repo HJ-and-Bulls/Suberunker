@@ -8,25 +8,28 @@ public class AnimationController : MonoBehaviour
     private Character2DController _controller;
     private SpriteRenderer _spriteRenderer;
     private Animator _animator;
+    private Player _player;
+
     private void Awake()
     {
         _controller = GetComponent<Character2DController>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _animator = GetComponent<Animator>();
+        _player = GetComponent<Player>();
     }
-    // Die 애니메이션 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.gameObject.tag.Equals("poop"))
-        {
-            _animator.SetBool("Die", true);
-        }
-    }
+    
     // Start is called before the first frame update
     void Start()
     {
         _controller.OnMoveEvent += FilpX;
+        _player.OnDead += SetAnimationDie;
     }
+    
+    private void SetAnimationDie()
+    {
+        _animator.SetBool("Die", true);
+    }
+    
     // 좌우 반전 
     private void FilpX(Vector2 direction)
     {

@@ -34,4 +34,13 @@ public class CharacterManager : MonoBehaviour
 
         return GeneratedCharacter;
     }
+
+    public void ClearCharacterArray()
+    {
+        foreach (GameObject chara in _characters)
+        {
+            Destroy(chara);
+        }
+        _characters.Clear();
+    }
 }
