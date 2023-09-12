@@ -43,6 +43,12 @@ public class GameManager : MonoBehaviour
     }
     public event Action<int> OnScoreChanged;
 
+    //void LateUpdate()
+    //{
+    //    OnTimeChanged += ;
+    //    OnScoreChanged += ;
+    //}
+
     // 게임 관리 이벤트
     public event Action OnGameStart;
     public event Action OnGameEnd;
@@ -74,12 +80,12 @@ public class GameManager : MonoBehaviour
             GameObject generatedCharacter = CharacterManager.Instance.MakeCharacter(i);
             generatedCharacter.GetComponent<Player>().OnDead += PlayerDeadCallback;
         }
-            
     }
 
     void StopGame()
     {
         Time.timeScale = 0f;
+        // 게임 종료 시 HUD.SetActive 로 안보이게 하기
     }
 
     void PlayerDeadCallback()
@@ -90,5 +96,6 @@ public class GameManager : MonoBehaviour
     public void AddScore()
     {
         Score += NumberOfAlives * 1; // 1은 난이도에 따라 증가
+
     }
 }
