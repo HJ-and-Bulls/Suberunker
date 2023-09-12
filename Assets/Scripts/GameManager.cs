@@ -43,12 +43,6 @@ public class GameManager : MonoBehaviour
     }
     public event Action<int> OnScoreChanged;
 
-    //void LateUpdate()
-    //{
-    //    OnTimeChanged += ;
-    //    OnScoreChanged += ;
-    //}
-
     // 게임 관리 이벤트
     public event Action OnGameStart;
     public event Action OnGameEnd;
@@ -66,6 +60,11 @@ public class GameManager : MonoBehaviour
         OnGameEnd += StopGame;
 
         OnGameStart?.Invoke();
+    }
+
+    void Update()
+    {
+        GameTime += Time.deltaTime;
     }
 
     void InitGame()

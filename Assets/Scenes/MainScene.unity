@@ -553,7 +553,7 @@ GameObject:
   - component: {fileID: 1325149969}
   - component: {fileID: 1325149968}
   m_Layer: 0
-  m_Name: SpawnControllers
+  m_Name: ObjectPoolingManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -571,9 +571,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2760618a9ed6f4d188e120e259257092, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PooledObjects: []
-  ObjectToPool: {fileID: 2463512044924732966, guid: e959a32a3f63344ba9898159f2fcbb78, type: 3}
-  AmountToPool: 10
+  poolInfoList:
+  - pooledObject: {fileID: 2463512044924732966, guid: e959a32a3f63344ba9898159f2fcbb78, type: 3}
+    capacity: 20
 --- !u!114 &1325149969
 MonoBehaviour:
   m_ObjectHideFlags: 0
