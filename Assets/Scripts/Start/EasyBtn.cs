@@ -9,6 +9,6 @@ public class EasyBtn : MonoBehaviour
 
     public void Easy()
     {
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene("CharacterScene");
     }
 }
