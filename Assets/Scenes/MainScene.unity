@@ -441,7 +441,7 @@ MonoBehaviour:
   - {fileID: -944628639613478452, guid: 0e685a3ddbe8e364897eac206f9a7026, type: 3}
   _animationControllers:
   - {fileID: 9100000, guid: e4cff99bdcba65045bd79a993cb7a7cd, type: 2}
-  - {fileID: 22100000, guid: 8e48b5a6ee7ec6e4483a386928091a0f, type: 2}
+  - {fileID: 22100000, guid: 17165c65644aa0f438446456ac73021d, type: 2}
 --- !u!114 &1774319517
 MonoBehaviour:
   m_ObjectHideFlags: 0
