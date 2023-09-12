@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -57,4 +57,5 @@ public class Player : MonoBehaviour
         _boxCollider.enabled = false;
         _playerInput.enabled = false;
     }
+    //메롱
 }
