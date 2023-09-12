@@ -7,6 +7,7 @@ using Random = UnityEngine.Random;
 public class PoopSpawner : MonoBehaviour
 {
     private float _nextSpawnTime;
+    
     void Start()
     {
         _nextSpawnTime = NextSpawnTime();
@@ -14,12 +15,13 @@ public class PoopSpawner : MonoBehaviour
 
     void FixedUpdate()
     {
+        ObjectPoolingManager manager = ObjectPoolingManager.SharedInstance;
+        
         _nextSpawnTime -= Time.deltaTime;
         if (_nextSpawnTime < 0)
         {
-            GameObject thisPoop = ObjectPool.SharedInstance.GetPooledObject();
-            if (thisPoop != null)
-                Spawn(thisPoop);
+            GameObject thisPoop = manager.GetFromPool("Poop");
+            Spawn(thisPoop);
             _nextSpawnTime = NextSpawnTime();
         }
     }
