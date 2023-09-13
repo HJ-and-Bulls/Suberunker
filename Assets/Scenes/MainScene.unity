@@ -857,6 +857,8 @@ MonoBehaviour:
     capacity: 20
   - pooledObject: {fileID: 2281921435508339623, guid: a3f34461e05364862909b1b14d1cff16, type: 3}
     capacity: 10
+  - pooledObject: {fileID: 2585074613080710115, guid: 79c7f47183e30b547aa687008ef7826d, type: 3}
+    capacity: 3
 --- !u!114 &1325149969
 MonoBehaviour:
   m_ObjectHideFlags: 0
