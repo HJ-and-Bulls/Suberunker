@@ -7,7 +7,21 @@ public class StartManager : MonoBehaviour
     public static StartManager Instance = null;
 
     public bool IsHard;
-    public int PlayerNumber;
+    private int _playerNumber;
+    public int PlayerNumber
+    {
+        get { return _playerNumber; }
+        set
+        {
+            _playerNumber = value;
+            if (_playerNumber >= CharacterCodes.Length)
+            {
+                int[] newCharacterCodes = new int[_playerNumber];
+                CharacterCodes.CopyTo(newCharacterCodes, 0);
+                CharacterCodes = newCharacterCodes;
+            }
+        }
+    }
     public int[] CharacterCodes;
 
     private void Awake()
@@ -29,13 +43,6 @@ public class StartManager : MonoBehaviour
 
     public void SetCharacterCode(int playerNum, int code)
     {
-        if (playerNum >= CharacterCodes.Length)
-        {
-            int[] newCharacterCodes = new int[playerNum];
-            CharacterCodes.CopyTo(newCharacterCodes, 0);
-            CharacterCodes = newCharacterCodes;
-        }
-        
         CharacterCodes[playerNum] = code;
     }
 }
