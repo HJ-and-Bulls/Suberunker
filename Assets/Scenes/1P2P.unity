@@ -1005,6 +1005,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1238115464}
   m_CullTransparentMesh: 1
+--- !u!1 &1289981894
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1289981896}
+  - component: {fileID: 1289981895}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1289981895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289981894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb2acce558df17542b9fcd66e56ae7e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BGM_Start: {fileID: 8300000, guid: 9adcf77609005f143918b5871fbdf39d, type: 3}
+  BGM_InGame: {fileID: 8300000, guid: f58891ae0754c3e47b3c41802cf898ca, type: 3}
+  Sound_ShiledOn: {fileID: 8300000, guid: 1eb5e460a99798248ad8a9427cd09bfb, type: 3}
+  Sound_ShiledOff: {fileID: 8300000, guid: 25737454b3073fb48b6f0f9463056f57, type: 3}
+  Sound_Die: {fileID: 8300000, guid: 99a7ccb37b462cc44adcc46cbcae8323, type: 3}
+--- !u!4 &1289981896
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289981894}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 380, y: 640, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1324206535
 GameObject:
   m_ObjectHideFlags: 0
@@ -1734,7 +1783,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileSpriteIndex: 13
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -2449,8 +2498,8 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 87ed9ffc3f99e40b3b57f24e28e13c53, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 1
-    m_Data: {fileID: 1511997682, guid: 463141bce05ce469c9c60228825704f1, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: -1254745885, guid: 463141bce05ce469c9c60228825704f1, type: 3}
   - m_RefCount: 1
@@ -2475,8 +2524,8 @@ Tilemap:
     m_Data: {fileID: -1250691484, guid: 463141bce05ce469c9c60228825704f1, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 1194786769, guid: 463141bce05ce469c9c60228825704f1, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 1511997682, guid: 463141bce05ce469c9c60228825704f1, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 1311736157, guid: 463141bce05ce469c9c60228825704f1, type: 3}
   - m_RefCount: 1
