@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+    private int _difficulty;
     private int _numberOfAlives = 1;
     public int NumberOfAlives
     {
@@ -74,6 +75,7 @@ public class GameManager : MonoBehaviour
         Score = 0;
         GameTime = 0f;
         NumberOfAlives = StartManager.Instance.PlayerNumber;
+        _difficulty = StartManager.Instance.IsHard ? 2 : 1;
         for (int i = 0; i < NumberOfAlives; i++)
         {
             GameObject generatedCharacter = CharacterManager.Instance.MakeCharacter(StartManager.Instance.CharacterCodes[i]);
@@ -94,7 +96,7 @@ public class GameManager : MonoBehaviour
 
     public void AddScore()
     {
-        Score += NumberOfAlives * 1; // 1은 난이도에 따라 증가
+        Score += NumberOfAlives * _difficulty; // 1은 난이도에 따라 증가
 
     }
 }
