@@ -33,7 +33,6 @@ public class PoopSpawner : MonoBehaviour
         param.SetPosition();
         param.SetGravityScale();
     }
-
     private float NextSpawnTime()
     {
         return Random.Range(0.5f, 1.0f);
