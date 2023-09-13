@@ -636,6 +636,7 @@ GameObject:
   - component: {fileID: 1499588070}
   - component: {fileID: 1499588069}
   - component: {fileID: 1499588068}
+  - component: {fileID: 1499588071}
   m_Layer: 5
   m_Name: HardBtn
   m_TagString: Untagged
@@ -706,7 +707,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1499588069}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1499588071}
+        m_TargetAssemblyTypeName: EasyBtn, Assembly-CSharp
+        m_MethodName: Hard
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1499588069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -745,6 +758,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1499588066}
   m_CullTransparentMesh: 1
+--- !u!114 &1499588071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1499588066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3237e48b43eff7b49b7013e328bd2161, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1509075965
 GameObject:
   m_ObjectHideFlags: 0

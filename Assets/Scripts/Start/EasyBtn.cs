@@ -10,4 +10,10 @@ public class EasyBtn : MonoBehaviour
         StartManager.Instance.IsHard = false;
         SceneManager.LoadScene("1P2P");
     }
+
+    public void Hard()
+    {
+        StartManager.Instance.IsHard = true;
+        SceneManager.LoadScene("1P2P");
+    }
 }

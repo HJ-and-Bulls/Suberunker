@@ -7,9 +7,11 @@ using Random = UnityEngine.Random;
 public class PoopSpawner : MonoBehaviour
 {
     private float _nextSpawnTime;
+    private float _difficulty;
     
     void Start()
     {
+        _difficulty = StartManager.Instance.IsHard ? 2f : 1f;
         _nextSpawnTime = NextSpawnTime();
     }
 
@@ -36,6 +38,6 @@ public class PoopSpawner : MonoBehaviour
     private float NextSpawnTime()
     {
         float time = GameManager.Instance.GameTime;
-        return Random.Range(0.5f, 1.0f) * (1f - (time / 60f));
+        return Random.Range(0.5f, 1.0f) * (1f / (1f + (time / 60f))) / _difficulty;
     }
 }
