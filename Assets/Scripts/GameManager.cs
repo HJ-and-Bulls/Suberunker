@@ -73,10 +73,10 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1f;
         Score = 0;
         GameTime = 0f;
-        NumberOfAlives = 2;
+        NumberOfAlives = StartManager.Instance.PlayerNumber;
         for (int i = 0; i < NumberOfAlives; i++)
         {
-            GameObject generatedCharacter = CharacterManager.Instance.MakeCharacter(i);
+            GameObject generatedCharacter = CharacterManager.Instance.MakeCharacter(StartManager.Instance.CharacterCodes[i]);
             generatedCharacter.GetComponent<Player>().OnDead += PlayerDeadCallback;
         }
     }
