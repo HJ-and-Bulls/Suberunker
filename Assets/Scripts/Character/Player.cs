@@ -36,7 +36,9 @@ public class Player : MonoBehaviour
     {
         OnHit += HitCallback;
         OnDead += DeadCallback;
+        OnDead += AudioManager.Instance.PlayDieSound;
         OnShieldChange += ApplyItemCallback;
+        OnShieldChange += AudioManager.Instance.PlayShieldSound;
         _isShieldOn = false;
     }
 

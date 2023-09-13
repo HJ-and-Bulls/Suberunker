@@ -58,6 +58,7 @@ public class GameManager : MonoBehaviour
     {
         // 이벤트 초기화
         OnGameStart += InitGame;
+        OnGameStart += () => AudioManager.Instance.SetBGM_InGame();
         OnGameEnd += StopGame;
 
         OnGameStart?.Invoke();
