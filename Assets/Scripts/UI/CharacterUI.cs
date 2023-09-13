@@ -16,7 +16,7 @@ public class CharacterUI : MonoBehaviour
     public void SetPlayerCharacter(int code)
     {
         selectingPlayer = ++selectingPlayer % StartManager.Instance.PlayerNumber;
-
+        CharacterSelectedFrame.PlayerNum = selectingPlayer;
         StartManager.Instance.SetCharacterCode(selectingPlayer, code);
         if (selectingPlayer == StartManager.Instance.PlayerNumber - 1) isReady = true;
     }
