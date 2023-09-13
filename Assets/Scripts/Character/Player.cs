@@ -36,6 +36,22 @@ public class Player : MonoBehaviour
     {
         OnHit += HitCallback;
         OnDead += DeadCallback;
+        OnShieldChange += ApplyItemCallback;
+        _isShieldOn = false;
+    }
+
+    private void ApplyItemCallback(bool isShieldOn)
+    {
+        if (isShieldOn == true)
+        {
+            Debug.Log(transform.GetChild(0).gameObject.name);
+            transform.GetChild(0).gameObject.SetActive(true);
+        }
+        else
+        {
+            Debug.Log(transform.GetChild(0).gameObject.name);
+            transform.GetChild(0).gameObject.SetActive(false);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -43,6 +59,10 @@ public class Player : MonoBehaviour
         if (other.gameObject.CompareTag("Poop"))
         {
             OnHit?.Invoke();
+        }
+        else if (other.gameObject.CompareTag("Item"))
+        {
+            IsShieldOn = true;
         }
     }
 

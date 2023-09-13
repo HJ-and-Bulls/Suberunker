@@ -832,6 +832,7 @@ GameObject:
   - component: {fileID: 1325149970}
   - component: {fileID: 1325149969}
   - component: {fileID: 1325149968}
+  - component: {fileID: 1325149971}
   m_Layer: 0
   m_Name: ObjectPoolingManager
   m_TagString: Untagged
@@ -854,6 +855,8 @@ MonoBehaviour:
   poolInfoList:
   - pooledObject: {fileID: 2463512044924732966, guid: e959a32a3f63344ba9898159f2fcbb78, type: 3}
     capacity: 20
+  - pooledObject: {fileID: 2281921435508339623, guid: a3f34461e05364862909b1b14d1cff16, type: 3}
+    capacity: 10
 --- !u!114 &1325149969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -881,6 +884,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1325149971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325149967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74f21f42a39714cb699b72a44474b078, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1391991918
 GameObject:
   m_ObjectHideFlags: 0
@@ -911,7 +926,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsHard: 0
-  PlayerNumber: 0
   CharacterCodes: 
 --- !u!4 &1391991920
 Transform:
@@ -1106,7 +1120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d0ae04a8a23c9240b75dfa06eb4f7f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _characterPrefab: {fileID: 8869694654560915245, guid: 0b72f8540405bd24a9ee98da0ccc994a, type: 3}
+  _characterPrefab: {fileID: 5167913534779860012, guid: 0b72f8540405bd24a9ee98da0ccc994a, type: 3}
   _inputActions:
   - {fileID: -944628639613478452, guid: 469ffbd11144ef5479ed5ce43eb37cbc, type: 3}
   - {fileID: -944628639613478452, guid: 0e685a3ddbe8e364897eac206f9a7026, type: 3}

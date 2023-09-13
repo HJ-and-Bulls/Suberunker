@@ -34,7 +34,8 @@ public class Poop : MonoBehaviour
 
     public void SetGravityScale()
     {
-        _rigidbody2D.gravityScale = Random.Range(1.0f, 1.5f);
+        float time = GameManager.Instance.GameTime;
+        _rigidbody2D.gravityScale = Random.Range(1.0f, 1.5f) * (1f + (time / 60f));
     }
     public void ShowEffct(GameObject effect)
     {

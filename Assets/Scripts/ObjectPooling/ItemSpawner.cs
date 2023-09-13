@@ -4,15 +4,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class PoopSpawner : MonoBehaviour
+public class ItemSpawner : MonoBehaviour
 {
     private float _nextSpawnTime;
-    
-    void Start()
+
+    private void Start()
     {
         _nextSpawnTime = NextSpawnTime();
     }
-
+    
     void FixedUpdate()
     {
         ObjectPoolingManager manager = ObjectPoolingManager.SharedInstance;
@@ -20,22 +20,22 @@ public class PoopSpawner : MonoBehaviour
         _nextSpawnTime -= Time.deltaTime;
         if (_nextSpawnTime < 0)
         {
-            GameObject thisPoop = manager.GetFromPool("Poop");
-            Spawn(thisPoop);
+            GameObject thisItem = manager.GetFromPool("Item");
+            Spawn(thisItem);
             _nextSpawnTime = NextSpawnTime();
         }
     }
 
-    private void Spawn(GameObject thisPoop)
+    private void Spawn(GameObject paramItem)
     {
-        thisPoop.SetActive(true);
-        Poop param = thisPoop.GetComponent<Poop>();
-        param.SetPosition();
-        param.SetGravityScale();
+        paramItem.SetActive(true);
+        Item thisItem = paramItem.GetComponent<Item>();
+        thisItem.SetPosition();
+        thisItem.SetGravityScale();
     }
+
     private float NextSpawnTime()
     {
-        float time = GameManager.Instance.GameTime;
-        return Random.Range(0.5f, 1.0f) * (1f - (time / 60f));
+        return Random.Range(7.0f, 10.0f);
     }
 }
