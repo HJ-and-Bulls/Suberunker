@@ -44,12 +44,10 @@ public class Player : MonoBehaviour
     {
         if (isShieldOn == true)
         {
-            Debug.Log(transform.GetChild(0).gameObject.name);
             transform.GetChild(0).gameObject.SetActive(true);
         }
         else
         {
-            Debug.Log(transform.GetChild(0).gameObject.name);
             transform.GetChild(0).gameObject.SetActive(false);
         }
     }
