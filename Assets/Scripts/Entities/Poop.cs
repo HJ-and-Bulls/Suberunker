@@ -8,6 +8,7 @@ using Random = UnityEngine.Random;
 public class Poop : MonoBehaviour
 {
     private Rigidbody2D _rigidbody2D;
+    ObjectPoolingManager manager = ObjectPoolingManager.SharedInstance;
     // private int _level;
 
     void Awake()
@@ -35,12 +36,18 @@ public class Poop : MonoBehaviour
     {
         _rigidbody2D.gravityScale = Random.Range(1.0f, 1.5f);
     }
-    
+    public void ShowEffct(GameObject effect)
+    {
+        effect.transform.position = new Vector3(this.transform.position.x, -4.17f, 0);
+        effect.SetActive(true);
+    }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Floor"))
         {
             this.gameObject.SetActive(false); // 1. 옵젝풀로 반환해야 함
+            GameObject effect = manager.GetFromPool("Poop_VFX");
+            ShowEffct(effect);
             GameManager.Instance.AddScore(); // 2. 점수 오름
             //GameManager.Instance.Score += _level;
         }
