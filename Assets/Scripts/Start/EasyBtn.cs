@@ -8,6 +8,6 @@ public class EasyBtn : MonoBehaviour
     public void Easy()
     {
         StartManager.Instance.IsHard = false;
-        SceneManager.LoadScene("CharacterScene");
+        SceneManager.LoadScene("1P2P");
     }
 }
