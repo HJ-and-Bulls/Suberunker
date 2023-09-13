@@ -69,9 +69,13 @@ public class GameManager : MonoBehaviour
         GameTime += Time.deltaTime;
     }
 
-    void InitGame()
+    public void InitGame()
     {
         CharacterManager.Instance.ClearCharacterArray();
+        if (ObjectPoolingManager.SharedInstance.Pools.ContainsKey("Poop"))
+            foreach (GameObject poops in ObjectPoolingManager.SharedInstance.Pools["Poop"])
+                poops.SetActive(false);
+
         Time.timeScale = 1f;
         Score = 0;
         GameTime = 0f;

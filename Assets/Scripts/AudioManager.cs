@@ -36,9 +36,19 @@ public class AudioManager : MonoBehaviour
         Sound = gameObject.AddComponent<AudioSource>();
         Sound.volume = 0.3f;
 
+        SceneManager.sceneLoaded += CheckStartScene;
+
         BGM.clip = BGM_Start;
         BGM.Play();
+    }
 
+    void CheckStartScene(Scene changed, LoadSceneMode loadSceneMode)
+    {
+        if (changed.name == "StartScene")
+        {
+            BGM.clip = BGM_Start;
+            BGM.Play();
+        }
     }
 
     public void SetBGM_InGame()
