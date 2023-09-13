@@ -5,16 +5,25 @@ using UnityEngine.SceneManagement;
 
 public class CharacterUI : MonoBehaviour
 {
-    public int playerId;
-    public void ValidSelectPlayer()
+    private bool isReady;
+    private int selectingPlayer;
+
+    private void Start()
     {
-        if (playerId >= 0)
-        {
-            DontDestroyOnLoad(this.gameObject);
-            SceneManager.LoadScene("MainScene");
-        }
-     }
+        selectingPlayer = -1;
+    }
 
-    //private void 
+    public void SetPlayerCharacter(int code)
+    {
+        selectingPlayer = ++selectingPlayer % StartManager.Instance.PlayerNumber;
 
+        StartManager.Instance.SetCharacterCode(selectingPlayer, code);
+        if (selectingPlayer == StartManager.Instance.PlayerNumber - 1) isReady = true;
+    }
+
+    public void GameStart()
+    {
+        if (isReady == false) return;
+        SceneManager.LoadScene("MainScene");
+    }
 }
