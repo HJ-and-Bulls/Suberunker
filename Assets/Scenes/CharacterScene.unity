@@ -732,7 +732,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &186828739
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1700,6 +1700,18 @@ MonoBehaviour:
       - m_Target: {fileID: 904145442}
         m_TargetAssemblyTypeName: CharacterUI, Assembly-CSharp
         m_MethodName: SetPlayerCharacter
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1833303773}
+        m_TargetAssemblyTypeName: CharacterSelectedFrame, Assembly-CSharp
+        m_MethodName: SetPlayerFrame
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2782,6 +2794,18 @@ MonoBehaviour:
       - m_Target: {fileID: 904145442}
         m_TargetAssemblyTypeName: CharacterUI, Assembly-CSharp
         m_MethodName: SetPlayerCharacter
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1833303773}
+        m_TargetAssemblyTypeName: CharacterSelectedFrame, Assembly-CSharp
+        m_MethodName: SetPlayerFrame
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4525,7 +4549,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 615257866}
   m_HandleRect: {fileID: 615257865}
   m_Direction: 0
-  m_Value: 0
+  m_Value: 0.49999997
   m_Size: 0.3413291
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -4761,6 +4785,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1833303773}
+        m_TargetAssemblyTypeName: CharacterSelectedFrame, Assembly-CSharp
+        m_MethodName: SetPlayerFrame
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 8
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1337372997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4892,7 +4928,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1491485899
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5230,6 +5266,18 @@ MonoBehaviour:
       - m_Target: {fileID: 904145442}
         m_TargetAssemblyTypeName: CharacterUI, Assembly-CSharp
         m_MethodName: SetPlayerCharacter
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1833303773}
+        m_TargetAssemblyTypeName: CharacterSelectedFrame, Assembly-CSharp
+        m_MethodName: SetPlayerFrame
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6019,6 +6067,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1833303773}
+        m_TargetAssemblyTypeName: CharacterSelectedFrame, Assembly-CSharp
+        m_MethodName: SetPlayerFrame
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 7
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1755027506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6331,6 +6391,18 @@ MonoBehaviour:
       - m_Target: {fileID: 904145442}
         m_TargetAssemblyTypeName: CharacterUI, Assembly-CSharp
         m_MethodName: SetPlayerCharacter
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1833303773}
+        m_TargetAssemblyTypeName: CharacterSelectedFrame, Assembly-CSharp
+        m_MethodName: SetPlayerFrame
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6670,6 +6742,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1833303773}
+        m_TargetAssemblyTypeName: CharacterSelectedFrame, Assembly-CSharp
+        m_MethodName: SetPlayerFrame
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1823073106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6719,6 +6803,7 @@ GameObject:
   - component: {fileID: 1833303770}
   - component: {fileID: 1833303771}
   - component: {fileID: 1833303772}
+  - component: {fileID: 1833303773}
   m_Layer: 5
   m_Name: Character Group
   m_TagString: Untagged
@@ -6752,7 +6837,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 141.94357, y: -28.5}
+  m_AnchoredPosition: {x: 0, y: -28.5}
   m_SizeDelta: {x: 0, y: 101}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1833303771
@@ -6793,6 +6878,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 2
   m_VerticalFit: 0
+--- !u!114 &1833303773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1833303769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 456570370c4148e40ac83574f1ec1e83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player1Frames:
+  - {fileID: 186828738}
+  - {fileID: 861981093}
+  - {fileID: 220972939}
+  - {fileID: 975044372}
+  - {fileID: 1694370790}
+  - {fileID: 1588351494}
+  - {fileID: 137123245}
+  - {fileID: 1525058503}
+  - {fileID: 831989050}
+  Player2Frames:
+  - {fileID: 1852747981}
+  - {fileID: 1491485898}
+  - {fileID: 1716547364}
+  - {fileID: 429805157}
+  - {fileID: 110997923}
+  - {fileID: 244692644}
+  - {fileID: 813322109}
+  - {fileID: 1711713}
+  - {fileID: 658761136}
 --- !u!1 &1852747981
 GameObject:
   m_ObjectHideFlags: 0
@@ -7173,6 +7290,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1833303773}
+        m_TargetAssemblyTypeName: CharacterSelectedFrame, Assembly-CSharp
+        m_MethodName: SetPlayerFrame
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2001435930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7506,6 +7635,18 @@ MonoBehaviour:
       - m_Target: {fileID: 904145442}
         m_TargetAssemblyTypeName: CharacterUI, Assembly-CSharp
         m_MethodName: SetPlayerCharacter
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 6
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1833303773}
+        m_TargetAssemblyTypeName: CharacterSelectedFrame, Assembly-CSharp
+        m_MethodName: SetPlayerFrame
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
