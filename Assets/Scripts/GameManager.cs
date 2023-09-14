@@ -58,7 +58,7 @@ public class GameManager : MonoBehaviour
     {
         // 이벤트 초기화
         OnGameStart += InitGame;
-        OnGameStart += () => AudioManager.Instance.SetBGM_InGame();
+        OnGameStart += AudioManager.Instance.SetBGM_InGame;
         OnGameEnd += StopGame;
 
         OnGameStart?.Invoke();
@@ -74,6 +74,9 @@ public class GameManager : MonoBehaviour
         CharacterManager.Instance.ClearCharacterArray();
         if (ObjectPoolingManager.SharedInstance.Pools.ContainsKey("Poop"))
             foreach (GameObject poops in ObjectPoolingManager.SharedInstance.Pools["Poop"])
+                poops.SetActive(false);
+        if (ObjectPoolingManager.SharedInstance.Pools.ContainsKey("Item"))
+            foreach (GameObject poops in ObjectPoolingManager.SharedInstance.Pools["Item"])
                 poops.SetActive(false);
 
         Time.timeScale = 1f;
