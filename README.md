@@ -1,9 +1,9 @@
-# Suberker
-![Suberunker_Preview](https://github.com/HJ-and-Bulls/Suberunker/assets/125940144/b5496036-6331-452f-91e1-279160a2b15f)
-
+# Suberunker
+<img src="https://github.com/HJ-and-Bulls/Suberunker/assets/125940144/b5496036-6331-452f-91e1-279160a2b15f" width=300>
 
 ## 🖥️ 프로젝트 소개
-똥 피하기 게임
+추억의 게임 개발 프로젝트 - AVOIDING POOP
+
 <br>
 
 ## 🕰️ 개발 기간
@@ -33,7 +33,7 @@
 - 난이도 상승
 
 #### 싱글 플레이 / 멀티 플레이
-- 플레이어 수 선택(최대 2명)
+- 플레이어 수 선택 (최대 2명)
 #### 아이템
 - 쉴드 아이템 사용 (1회 사용)
 #### 시간 / 점수
