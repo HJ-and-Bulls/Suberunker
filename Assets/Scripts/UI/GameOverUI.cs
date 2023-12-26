@@ -9,7 +9,8 @@ public class GameOverUI : MonoBehaviour
     
     void Start()
     {
-        GameManager.Instance.OnGameEnd += () => { _gameOverPopUp.SetActive(true); };
+        //GameManager.Instance.OnGameEnd += () => { _gameOverPopUp.SetActive(true); };
+        EventBus.SubScribe(EventType.GAMEEND, () => _gameOverPopUp.SetActive(true));
     }
 
     public void Btn_Retry()
