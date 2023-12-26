@@ -16,7 +16,8 @@ public class GameManager : MonoBehaviour
         {
             _numberOfAlives = value;
             if (_numberOfAlives <= 0)
-                OnGameEnd?.Invoke();
+                //OnGameEnd?.Invoke();
+                EventBus.Publish(EventType.GAMEEND);
         }
     }
 
@@ -57,11 +58,16 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         // 이벤트 초기화
-        OnGameStart += InitGame;
-        OnGameStart += AudioManager.Instance.SetBGM_InGame;
-        OnGameEnd += StopGame;
-
-        OnGameStart?.Invoke();
+        // OnGameStart += InitGame;
+        // OnGameStart += AudioManager.Instance.SetBGM_InGame;
+        // OnGameEnd += StopGame;
+        //
+        // OnGameStart?.Invoke();
+        EventBus.SubScribe(EventType.GAMESTART, InitGame);
+        EventBus.SubScribe(EventType.GAMESTART, AudioManager.Instance.SetBGM_InGame);
+        EventBus.SubScribe(EventType.GAMEEND, StopGame);
+        
+        EventBus.Publish(EventType.GAMESTART);
     }
 
     void Update()
